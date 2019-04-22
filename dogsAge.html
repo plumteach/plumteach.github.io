@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Age in Dog Years</title>
+</head>
+
+<body style="background-color:limegreen">
+	<h1>Age in Dog Years</h1>
+	<p>By Teacher</p>
+	<p id="theHAge"></p>
+	<p id="theDAge"></p>
+	<script language="javascript">
+		let iHumanAge=0; // iHumanAge is an integer variable to hold the dogs age in human years
+		let iDogAge=0;
+		let sDogSize=""; // iDogSize is a text type variable (string) and is set to empty i.e. ""
+		alert("This program asks for the age of your dog in human years.\n It converts it to dog years. Then displays it.");
+		iHumanAge=Math.round(prompt("What is the age of the dog in human years?"));
+		sDogSize=prompt("What size is your dog (small or large)?");
+		if (iHumanAge==1) {iDogAge=16};
+		if (iHumanAge==2) {iDogAge=24};
+		if (iHumanAge==3 || iHumanAge== 4 || iHumanAge==5) {
+			iDogAge=(24+(iHumanAge-2)*5) }; // Two verticle lines '||' represent an 'or' logical operator
+		if (sDogSize=="small"){iDogAge=(39+(iHumanAge-5)*5)};
+		if (sDogSize=="large"){iDogAge=(39+(iHumanAge-5)*6)};
+		alert("Your dog's age in dog years is "+iDogAge)
+		confirm("The results are rounded to the nearest integer")
+		document.getElementById("theHAge").innerHTML = ("The dog's age in human years is: " + iHumanAge);
+		document.getElementById("theDAge").innerHTML = ("The dog's age in dog years is: " + iDogAge);
+	</script>
+</body>
+</html>
